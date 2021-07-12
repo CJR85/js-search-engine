@@ -31,9 +31,15 @@ function selectElement(selector) {
   return document.querySelector(selector);
 }
 
+// Clears content inside search-results div
+function clearResults() {
+  selectElement('.search-results').innerHTML = '';
+}
+
 function getResults() {
   const search = selectElement('.searchbar').value;
 
+  clearResults();
   for (let i = 0; i < database.length; i++) {
     if (
       database[i].carName
