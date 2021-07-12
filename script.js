@@ -46,11 +46,13 @@ function getResults() {
       selectElement('.search-results').innerHTML += `
 
         <div class="search-results-item">
-          <span class="search-item>${database[i].carName}</span>"
-          <span class="search-item>${database[i].carPrice}</span>"
-          <span class="search-item>${database[i].carCode}</span>"
+          <span class="search-item">${database[i].carName}</span>
+          <span class="search-item">${database[i].carPrice}</span>
+          <span class="search-item">${database[i].carCode}</span>
         </div>
       `;
     }
   }
 }
+
+selectElement('.searchbar').addEventListener('keyup', getResults);
