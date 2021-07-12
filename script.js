@@ -25,3 +25,8 @@ const database = [
     carCode: 'VW',
   },
 ];
+
+// Selects element passed in
+function selectElement(selector) {
+  return document.querySelector(selector);
+}
